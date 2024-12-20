@@ -19,6 +19,9 @@ Das Projekt ist modular aufgebaut, um Skalierbarkeit, Wartbarkeit und DevOps-Pri
   - `Projekt_Dokumentation.md`: Diese Dokumentation.
 - **`configs/`**: Konfigurationsdateien für die Anwendung und Infrastruktur.
 - **`ci_cd/`**: Konfigurationen für CI/CD-Pipelines.
+- **`logs/`**: Log-Dateien der Anwendung.
+- **`docker/`**: Docker-Konfigurationsdateien.
+- **`kubernetes/`**: Kubernetes-Konfigurationsdateien.
 
 ---
 
@@ -186,9 +189,38 @@ Das Projekt ist modular aufgebaut, um Skalierbarkeit, Wartbarkeit und DevOps-Pri
 
 ---
 
-### **7. Weitere Schritte**
-- Weitere Schritte umfassen das Erstellen von Python-Skripten, das Implementieren von GitHub Actions für CI/CD-Pipelines und das Automatisieren von Prozessen wie das Hochladen von YouTube-Videos und das Verarbeiten von Mediendateien mit FFmpeg.
+### **7. Integration von OpenAI API und Visualisierung**
 
-### **7.1 Hinzufügen der README.md zu GitHub**
-Nun kannst du diese README.md-Datei einfach zu deinem Repository hinzufügen und dort einsehen.
+#### **7.1 OpenAI API einrichten**
+- **API-Schlüsseldatei erstellen:**
+  Erstelle eine Datei namens `openai_key.txt` im Projektordner und füge deinen OpenAI API-Schlüssel ein.
 
+- **Code anpassen:**
+  Der Code lädt automatisch den API-Schlüssel aus der Datei.
+
+#### **7.2 Textgenerierung und Visualisierung**
+- **Textgenerierung:**
+  Das Programm generiert eine Geschichte basierend auf Benutzereingaben.
+- **Visualisierungsvorschläge:**
+  Identifiziert visuell geeignete Szenen und bereitet die Beschreibung für DALL-E vor.
+
+#### **7.3 Beispiel**
+- **Eingabe:**
+  "Charles Manson leben"
+- **Ausgabe:**
+  - Generierte Geschichte
+  - Visualisierungsvorschläge für DALL-E, z. B.:
+    1. "Eine düstere Stadt bei Nacht mit bedrohlichen Schatten."
+    2. "Ein verlassener Raum mit umgestürzten Möbeln und zerbrochenem Glas."
+
+---
+
+### **8. Weitere Schritte**
+- Integration der DALL-E API für die direkte Erstellung von Bildern basierend auf den generierten Szenen.
+- Implementierung von CI/CD-Pipelines zur Automatisierung von Tests und Bereitstellung.
+
+---
+
+### **9. Zusätzliche Ressourcen**
+- [OpenAI Python Library](https://github.com/openai/openai-python)
+- [DALL-E API Dokumentation](https://platform.openai.com/docs/models/dall-e)
